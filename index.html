@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pravesh Singh | Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000, #fff);
+            color: white;
+        }
+        .navbar {
+            background: #111;
+        }
+        .navbar a {
+            color: white;
+        }
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to right, #000, #555);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero img {
+            width: 200px;
+            height: 200px;
+            border-radius: 0;
+            margin-bottom: 20px;
+        }
+        .projects, .resume {
+            padding: 50px 0;
+            color: black;
+        }
+        .about {
+            padding: 50px 0;
+            color: black;
+            text-align: center;
+            background: #f8f9fa;
+        }
+        .contact {
+            background: #fff;
+            padding: 50px 0;
+            color: black;
+        }
+        .contact-icons img {
+            width: 40px;
+            margin: 10px;
+        }
+        .card {
+            background: #222;
+            color: white;
+            border: none;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            transition: 0.3s ease-in-out;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#hero">PRAVESH VINODKUMAR SINGH</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <header id="hero" class="hero">
+        <h1>Hi! I am Pravesh</h1>
+        <p>Analyzing and visualizing data to make better and informed business decisions</p>
+    </header>
+    
+    <section id="about" class="about">
+        <div class="container text-center">
+            <img src="profile.jpg" alt="Profile Photo" width="200" height="200">
+            <h2>About Me</h2>
+            <p>I am a passionate Data Analyst with a strong enthusiasm for technology and data-driven insights. I have effective communication skills and a willingness to continuously learn and adapt. Skilled in SQL, Python, and Power BI, I enjoy transforming complex data into meaningful insights to drive business decisions.</p>
+        </div>
+    </section>
+    
+    <section id="projects" class="container projects">
+        <h2 class="text-center">Projects</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Netflix Data Analysis</h5>
+                        <p class="card-text">A detailed analysis of Netflix data to derive insights.</p>
+                        <a href="https://github.com/singhpravesh882/Netflix-Data_Analysis" class="btn btn-primary" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Sales Analysis Project</h5>
+                        <p class="card-text">Analyzing sales data for business insights and trends.</p>
+                        <a href="https://github.com/singhpravesh882/Sales-Analysis-Project" class="btn btn-primary" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="resume" class="container resume text-center">
+        <h2>Resume</h2>
+        <p>Download my resume to learn more about my experience and skills.</p>
+        <a href="https://drive.google.com/file/d/1N_kdNJ4AFo86YFZ1VOKAX4it2SQq_khS/view?usp=sharing" class="btn btn-success" target="_blank">Download Resume</a>
+    </section>
+    
+    <footer id="contact" class="contact text-center">
+        <h2>Contact Me</h2>
+        <div class="contact-icons">
+            <a href="mailto:singhpravesh882@gmail.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail">
+            </a>
+            <a href="https://www.linkedin.com/in/pravesh-singh-b4193b23/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/singhpravesh882" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt="GitHub">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
