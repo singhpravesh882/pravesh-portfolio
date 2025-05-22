@@ -1,175 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pravesh Singh | Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #000, #fff);
-            color: white;
-        }
-        .navbar {
-            background: #111;
-        }
-        .navbar a {
-            color: white;
-        }
-        .hero {
-            height: 100vh;
-            background: linear-gradient(to right, #000, #555);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        .hero img {
-            width: 200px;
-            height: 200px;
-            border-radius: 0;
-            margin-bottom: 20px;
-        }
-        .projects, .resume {
-            padding: 50px 0;
-            color: black;
-        }
-        .about {
-            padding: 50px 0;
-            color: black;
-            text-align: center;
-            background: #f8f9fa;
-        }
-        .contact {
-            background: #fff;
-            padding: 50px 0;
-            color: black;
-        }
-        .contact-icons img {
-            width: 40px;
-            margin: 10px;
-        }
-        .card {
-            background: #222;
-            color: white;
-            border: none;
-        }
-        .card:hover {
-            transform: scale(1.05);
-            transition: 0.3s ease-in-out;
-            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
-        }
-        .navbar-brand {
-            font-weight: bold;
-            font-size: 1.5rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pravesh Singh | Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #000, #fff);
+      color: white;
+    }
+
+    .navbar {
+      background: #111;
+    }
+
+    .navbar a {
+      color: white !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(to right, #000, #555);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero h1, .hero p {
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    }
+
+    .about {
+      background: #f8f9fa;
+      color: black;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .about img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .projects, .resume {
+      padding: 60px 0;
+      color: black;
+    }
+
+    .card {
+      background: #222;
+      color: white;
+      border: none;
+      transition: 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .contact {
+      background: #fff;
+      padding: 60px 0;
+      color: black;
+    }
+
+    .contact-icons img {
+      width: 40px;
+      margin: 10px;
+      transition: transform 0.3s;
+    }
+
+    .contact-icons img:hover {
+      transform: scale(1.2);
+    }
+
+    .dashboards img {
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+      max-height: 250px;
+    }
+
+    .dashboards img:hover {
+      transform: scale(1.03);
+    }
+
+    .dashboards {
+      background: #f1f1f1;
+      color: black;
+    }
+  </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#hero">PRAVESH VINODKUMAR SINGH</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
-    <header id="hero" class="hero">
-        <h1>Hi! I am Pravesh</h1>
-        <p>Analyzing and visualizing data to make better and informed business decisions</p>
-    </header>
-    
-    <section id="about" class="about">
-        <div class="container text-center">
-            <img src="profile.jpg" alt="Profile Photo" width="200" height="200">
-            <h2>About Me</h2>
-            <p>I am a passionate Data Analyst with a strong enthusiasm for technology and data-driven insights. I have effective communication skills and a willingness to continuously learn and adapt. Skilled in SQL, Python, and Power BI, I enjoy transforming complex data into meaningful insights to drive business decisions.</p>
-        </div>
-    </section>
-    
-    <section id="projects" class="container projects">
-        <h2 class="text-center">Projects</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Netflix Data Analysis</h5>
-                        <p class="card-text">A detailed analysis of Netflix data to derive insights.</p>
-                        <a href="https://github.com/singhpravesh882/Netflix-Data_Analysis" class="btn btn-primary" target="_blank">View Project</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Sales Analysis Project</h5>
-                        <p class="card-text">Analyzing sales data for business insights and trends.</p>
-                        <a href="https://github.com/singhpravesh882/Sales-Analysis-Project" class="btn btn-primary" target="_blank">View Project</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Superstore Data Analysis</h5>
-                    <p class="card-text">Insightful analysis of Superstore sales data using SQL and Power BI to uncover trends and business performance.</p>
-                    <a href="https://github.com/singhpravesh882/Superstore_Data_Analysis" class="btn btn-primary" target="_blank">View Project</a>
-                </div>
-            </div>
-        </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">PRAVESH VINODKUMAR SINGH</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#dashboards">Dashboards</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="col-md-4 mt-4">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Banking Data Analysis</h5>
-                <p class="card-text">Exploratory analysis of banking dataset to uncover customer behavior and trends.</p>
-                <a href="https://github.com/singhpravesh882/banking" class="btn btn-primary" target="_blank">View Project</a>
-            </div>
-        </div>
+  </nav>
+
+  <header id="hero" class="hero">
+    <h1>Hi! I am Pravesh</h1>
+    <p>Analyzing and visualizing data to make better and informed business decisions</p>
+  </header>
+
+  <section id="about" class="about">
+    <div class="container">
+      <img src="https://raw.githubusercontent.com/singhpravesh882/pravesh-portfolio/main/profile.jpg" alt="Pravesh Singh Profile Photo" />
+      <h2>About Me</h2>
+      <p>I am a passionate Data Analyst with a strong enthusiasm for technology and data-driven insights. I have effective communication skills and a willingness to continuously learn and adapt. Skilled in SQL, Python, and Power BI, I enjoy transforming complex data into meaningful insights to drive business decisions.</p>
     </div>
-    <div class="col-md-4 mt-4">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Real Estate Data Analysis</h5>
-                <p class="card-text">A comprehensive analysis of real estate data to find market patterns and investment opportunities.</p>
-                <a href="https://github.com/singhpravesh882/Real-Estate-Analysis" class="btn btn-primary" target="_blank">View Project</a>
-            </div>
+  </section>
+
+  <section id="projects" class="container projects">
+    <h2 class="text-center mb-5">Projects</h2>
+    <div class="row">
+      <!-- Existing Projects -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Netflix Data Analysis</h5>
+            <p class="card-text">A detailed analysis of Netflix data to derive insights.</p>
+            <a href="https://github.com/singhpravesh882/Netflix-Data_Analysis" class="btn btn-primary" target="_blank">View Project</a>
+          </div>
         </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Sales Analysis Project</h5>
+            <p class="card-text">Analyzing sales data for business insights and trends.</p>
+            <a href="https://github.com/singhpravesh882/Sales-Analysis-Project" class="btn btn-primary" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Superstore Data Analysis</h5>
+            <p class="card-text">Insightful analysis using SQL and Power BI to uncover trends and performance.</p>
+            <a href="https://github.com/singhpravesh882/Superstore_Data_Analysis" class="btn btn-primary" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+      <!-- New Projects -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Banking Data Analysis</h5>
+            <p class="card-text">Exploratory analysis of banking data to understand customer trends.</p>
+            <a href="https://github.com/singhpravesh882/banking" class="btn btn-primary" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Real Estate Analysis</h5>
+            <p class="card-text">A comprehensive analysis of real estate data for market pattern insights.</p>
+            <a href="https://github.com/singhpravesh882/Real-Estate-Analysis" class="btn btn-primary" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </section>
+
+  <section id="dashboards" class="py-5" style="background: #f1f1f1;">
+  <div class="container">
+    <h2 class="text-center mb-5" style="color: black;">Data Visualization</h2>
+    <div class="row g-4">
+      
+      <!-- Superstore Dashboard -->
+      <div class="col-md-4">
+        <div class="card text-center bg-dark text-white border-0 shadow-sm">
+          <img src="https://raw.githubusercontent.com/singhpravesh882/Superstore_Data_Analysis/main/Superstore.png"
+               class="card-img-top img-fluid rounded-top"
+               style="cursor:pointer;"
+               alt="Superstore Dashboard"
+               data-bs-toggle="modal"
+               data-bs-target="#superstoreModal">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="https://github.com/singhpravesh882/Superstore_Data_Analysis" 
+                 class="text-decoration-none text-info" target="_blank">
+                 Superstore Dashboard
+              </a>
+            </h5>
+            <p class="card-text">Superstore Data Analysis using Power BI.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Banking Dashboard -->
+      <div class="col-md-4">
+        <div class="card text-center bg-dark text-white border-0 shadow-sm">
+          <img src="https://raw.githubusercontent.com/singhpravesh882/banking/main/Banking.png"
+               class="card-img-top img-fluid rounded-top"
+               style="cursor:pointer;"
+               alt="Sales Dashboard"
+               data-bs-toggle="modal"
+               data-bs-target="#salesModal">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="https://github.com/singhpravesh882/banking" 
+                 class="text-decoration-none text-info" target="_blank">
+                 Sales Dashboard
+              </a>
+            </h5>
+            <p class="card-text">Loan and Deposit Analysis using Power BI.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real Estate Dashboard -->
+      <div class="col-md-4">
+        <div class="card text-center bg-dark text-white border-0 shadow-sm">
+          <img src="https://raw.githubusercontent.com/singhpravesh882/Real-Estate-Analysis/main/Real_estate.png"
+               class="card-img-top img-fluid rounded-top"
+               style="cursor:pointer;"
+               alt="Real Estate Dashboard"
+               data-bs-toggle="modal"
+               data-bs-target="#realEstateModal">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="https://github.com/singhpravesh882/Real-Estate-Analysis" 
+                 class="text-decoration-none text-info" target="_blank">
+                 Real Estate Dashboard
+              </a>
+            </h5>s
+            <p class="card-text">Real Estate Analysis using Power BI.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modals -->
+
+  <!-- Superstore Modal -->
+  <div class="modal fade" id="superstoreModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content bg-dark">
+        <div class="modal-body p-0 text-center">
+          <img src="https://raw.githubusercontent.com/singhpravesh882/Superstore_Data_Analysis/main/Superstore.png" class="img-fluid" alt="Superstore Dashboard">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Banking Modal -->
+  <div class="modal fade" id="salesModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content bg-dark">
+        <div class="modal-body p-0 text-center">
+          <img src="https://raw.githubusercontent.com/singhpravesh882/banking/main/Banking.png" class="img-fluid" alt="Sales Dashboard">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Real Estate Modal -->
+  <div class="modal fade" id="realEstateModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content bg-dark">
+        <div class="modal-body p-0 text-center">
+          <img src="https://raw.githubusercontent.com/singhpravesh882/Real-Estate-Analysis/main/Real_estate.png" class="img-fluid" alt="Real Estate Dashboard">
+        </div>
+      </div>
+    </div>
+  </div>
+
 </section>
-    
-    <section id="resume" class="container resume text-center">
-        <h2>Resume</h2>
-        <p>Download my resume to learn more about my experience and skills.</p>
-        <a href="https://drive.google.com/file/d/1InP9E0jVLxUlAkZg9OnDuzNy3HkfgwEi/view?usp=sharing" class="btn btn-success" target="_blank">Download Resume</a>
-    </section>
-    
-    <footer id="contact" class="contact text-center">
-        <h2>Contact Me</h2>
-        <div class="contact-icons">
-            <a href="mailto:singhpravesh882@gmail.com" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail">
-            </a>
-            <a href="https://www.linkedin.com/in/pravesh-singh-b4193b23/" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-            </a>
-            <a href="https://github.com/singhpravesh882" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt="GitHub">
-            </a>
-        </div>
-    </footer>
+
+  <section id="resume" class="container resume text-center">
+    <h2>Resume</h2>
+    <p>Download my resume to learn more about my experience and skills.</p>
+    <a href="https://drive.google.com/file/d/1InP9E0jVLxUlAkZg9OnDuzNy3HkfgwEi/view?usp=sharing" class="btn btn-success" target="_blank">Download Resume</a>
+  </section>
+
+  <footer id="contact" class="contact text-center">
+    <h2>Contact Me</h2>
+    <div class="contact-icons">
+      <a href="mailto:singhpravesh882@gmail.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail">
+      </a>
+      <a href="https://www.linkedin.com/in/pravesh-singh-b4193b23/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/singhpravesh882" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt="GitHub">
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
